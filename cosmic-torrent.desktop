@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Cosmic Torrent
+Comment=A modern BitTorrent client for COSMIC desktop
+Exec=cosmic-torrent
+Icon=cosmic-torrent
+Terminal=false
+Categories=Network;FileTransfer;P2P;
+MimeType=application/x-bittorrent;x-scheme-handler/magnet;
+Keywords=torrent;download;p2p;bittorrent;magnet;
+StartupNotify=true
+StartupWMClass=cosmic-torrent

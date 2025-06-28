@@ -1,0 +1,50 @@
+[package]
+name = "cosmic-torrent"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A modern torrent client built with libcosmic"
+license = "GPL-3.0-or-later"
+
+[features]
+default = ["wayland"]
+wayland = ["libcosmic/wayland"]
+
+[dependencies]
+# Note: libcosmic may not be available on crates.io yet
+# You might need to use git dependency or build from source
+# For now, using a placeholder - replace with actual cosmic dependencies when available
+tokio = { version = "1.45.1", features = ["full"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+lava_torrent = "0.11.1"
+url = "2.0"
+log = "0.4"
+env_logger = "0.11.8"
+futures = "0.3.31"
+bytes = "1.0.1"
+sha1 = "0.10.6"
+hex = "0.4.3"
+dirs = "6.0"
+toml = "0.8.23"
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+tracing-log = "0.2"
+i18n-embed-fl = "0.9.4"
+rust-embed = "8.7.2"
+
+[dependencies.libcosmic]
+git = "http://github.com/pop-os/libcosmic"
+default-features = false
+features = [
+  "a11y",
+  "dbus-config",
+  "multi-window",
+  "single-instance",
+  "winit",
+  "tokio",
+  "xdg-portal",
+  "wgpu",
+  "surface-message",
+  "wayland",
+]
